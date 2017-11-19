@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/piet/hw_projects/led_dimmers/led_dimmers.sch</source>
+    <date>2017-11-13T20:51:02 CET</date>
+    <tool>Eeschema 4.0.7+dfsg1-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>led_dimmers.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Q1">
+      <value>FDB8832</value>
+      <footprint>piet:TO-263AB_D2PAK</footprint>
+      <libsource lib="piet" part="FDB8832"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A126CB</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>100R</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A128E3</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A12970</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>jumper2x7</value>
+      <footprint>piet:Header2x7_254</footprint>
+      <libsource lib="piet" part="jumper2x7"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A12F1E</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1318C</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A131F9</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A135EE</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1365F</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A136A5</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A136E0</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1371E</tstamp>
+    </comp>
+    <comp ref="ARD1">
+      <value>ArduinoNano</value>
+      <footprint>piet:ArduinoNano</footprint>
+      <libsource lib="piet" part="ArduinoNano"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1622F</tstamp>
+    </comp>
+    <comp ref="X7">
+      <value>8P8C</value>
+      <footprint>piet:8P8C-1</footprint>
+      <libsource lib="piet" part="8P8C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A16BF3</tstamp>
+    </comp>
+    <comp ref="X6">
+      <value>8P8C</value>
+      <footprint>piet:8P8C-1</footprint>
+      <libsource lib="piet" part="8P8C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A17611</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>4k7</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A19283</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>4k7</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A194D2</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1ADF2</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>PC817</value>
+      <footprint>piet:PC817XI</footprint>
+      <libsource lib="piet" part="PC817"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1B642</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>680R</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1C17C</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1C26E</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1CB66</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>PC817</value>
+      <footprint>piet:PC817XI</footprint>
+      <libsource lib="piet" part="PC817"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1CB6C</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>680R</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1CB8D</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A1CB93</tstamp>
+    </comp>
+    <comp ref="X2">
+      <value>Conn1x2</value>
+      <footprint>piet:TerminalBlockPluggable1x2_508</footprint>
+      <libsource lib="piet" part="Conn1x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A200B2</tstamp>
+    </comp>
+    <comp ref="X3">
+      <value>Conn1x2</value>
+      <footprint>piet:TerminalBlockPluggable1x2_508</footprint>
+      <libsource lib="piet" part="Conn1x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A217BE</tstamp>
+    </comp>
+    <comp ref="X4">
+      <value>Conn1x2</value>
+      <footprint>piet:TerminalBlockPluggable1x2_508</footprint>
+      <libsource lib="piet" part="Conn1x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A21F81</tstamp>
+    </comp>
+    <comp ref="X1">
+      <value>SerialDebug</value>
+      <footprint>piet:Header1x4_254</footprint>
+      <libsource lib="piet" part="SerialDebug"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A2308D</tstamp>
+    </comp>
+    <comp ref="X5">
+      <value>Conn1x3</value>
+      <footprint>piet:TerminalBlockPluggable1x3_350</footprint>
+      <libsource lib="piet" part="Conn1x3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A24FDE</tstamp>
+    </comp>
+    <comp ref="MOUNT1">
+      <value>MountingHole</value>
+      <footprint>piet:HoleM4</footprint>
+      <libsource lib="piet" part="MountingHole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A28C23</tstamp>
+    </comp>
+    <comp ref="MOUNT2">
+      <value>MountingHole</value>
+      <footprint>piet:HoleM4</footprint>
+      <libsource lib="piet" part="MountingHole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A28DF2</tstamp>
+    </comp>
+    <comp ref="MOUNT3">
+      <value>MountingHole</value>
+      <footprint>piet:HoleM4</footprint>
+      <libsource lib="piet" part="MountingHole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A28E69</tstamp>
+    </comp>
+    <comp ref="MOUNT4">
+      <value>MountingHole</value>
+      <footprint>piet:HoleM4</footprint>
+      <libsource lib="piet" part="MountingHole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59A28EDB</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="piet" part="8P8C">
+      <description>8P8C modular connector</description>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">8P8C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspc"/>
+        <pin num="2" name="2" type="unspc"/>
+        <pin num="3" name="3" type="unspc"/>
+        <pin num="4" name="4" type="unspc"/>
+        <pin num="5" name="5" type="unspc"/>
+        <pin num="6" name="6" type="unspc"/>
+        <pin num="7" name="7" type="unspc"/>
+        <pin num="8" name="8" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="ArduinoNano">
+      <fields>
+        <field name="Reference">ARD</field>
+        <field name="Value">ArduinoNano</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TX1" type="unspc"/>
+        <pin num="2" name="RX0" type="unspc"/>
+        <pin num="3" name="RST" type="unspc"/>
+        <pin num="4" name="GND" type="unspc"/>
+        <pin num="5" name="D2" type="unspc"/>
+        <pin num="6" name="D3" type="unspc"/>
+        <pin num="7" name="D4" type="unspc"/>
+        <pin num="8" name="D5" type="unspc"/>
+        <pin num="9" name="D6" type="unspc"/>
+        <pin num="10" name="D7" type="unspc"/>
+        <pin num="11" name="D8" type="unspc"/>
+        <pin num="12" name="D9" type="unspc"/>
+        <pin num="13" name="D10" type="unspc"/>
+        <pin num="14" name="D11" type="unspc"/>
+        <pin num="15" name="D12" type="unspc"/>
+        <pin num="16" name="D13" type="unspc"/>
+        <pin num="17" name="3V3" type="unspc"/>
+        <pin num="18" name="REF" type="unspc"/>
+        <pin num="19" name="A0" type="unspc"/>
+        <pin num="20" name="A1" type="unspc"/>
+        <pin num="21" name="A2" type="unspc"/>
+        <pin num="22" name="A3" type="unspc"/>
+        <pin num="23" name="A4" type="unspc"/>
+        <pin num="24" name="A5" type="unspc"/>
+        <pin num="25" name="A6" type="unspc"/>
+        <pin num="26" name="A7" type="unspc"/>
+        <pin num="27" name="5V" type="unspc"/>
+        <pin num="28" name="RST" type="unspc"/>
+        <pin num="29" name="GND" type="unspc"/>
+        <pin num="30" name="VIN" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="Conn1x2">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">Conn1x2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspc"/>
+        <pin num="2" name="2" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="Conn1x3">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">Conn1x3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspc"/>
+        <pin num="2" name="2" type="unspc"/>
+        <pin num="3" name="3" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="FDB8832">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">FDB8832</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Gate" type="unspc"/>
+        <pin num="3" name="Source" type="unspc"/>
+        <pin num="4" name="Drain" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="MountingHole">
+      <fields>
+        <field name="Reference">MOUNT</field>
+        <field name="Value">MountingHole</field>
+      </fields>
+      <pins>
+        <pin num="M" name="HOLE" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="PC817">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PC817</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Anode" type="unspc"/>
+        <pin num="2" name="Cathode" type="unspc"/>
+        <pin num="3" name="Emitter" type="unspc"/>
+        <pin num="4" name="Collector" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="SerialDebug">
+      <description>Header for UART connector</description>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">SerialDebug</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Tx" type="unspc"/>
+        <pin num="2" name="Rx" type="unspc"/>
+        <pin num="3" name="RST" type="unspc"/>
+        <pin num="4" name="GND" type="unspc"/>
+      </pins>
+    </libpart>
+    <libpart lib="piet" part="jumper2x7">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">jumper2x7</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1A" type="unspc"/>
+        <pin num="2" name="2A" type="unspc"/>
+        <pin num="3" name="3A" type="unspc"/>
+        <pin num="4" name="4A" type="unspc"/>
+        <pin num="5" name="5A" type="unspc"/>
+        <pin num="6" name="6A" type="unspc"/>
+        <pin num="7" name="7A" type="unspc"/>
+        <pin num="8" name="7B" type="unspc"/>
+        <pin num="9" name="6B" type="unspc"/>
+        <pin num="10" name="5B" type="unspc"/>
+        <pin num="11" name="4B" type="unspc"/>
+        <pin num="12" name="3B" type="unspc"/>
+        <pin num="13" name="2B" type="unspc"/>
+        <pin num="14" name="1B" type="unspc"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="piet">
+      <uri>/home/piet/hw_projects/kicad_libraries/piet.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/addr4">
+      <node ref="J1" pin="11"/>
+      <node ref="R8" pin="1"/>
+      <node ref="ARD1" pin="12"/>
+    </net>
+    <net code="2" name="/SCL">
+      <node ref="X7" pin="4"/>
+      <node ref="ARD1" pin="24"/>
+      <node ref="X6" pin="4"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="3" name="/SDA">
+      <node ref="R14" pin="2"/>
+      <node ref="X7" pin="3"/>
+      <node ref="ARD1" pin="23"/>
+      <node ref="X6" pin="3"/>
+    </net>
+    <net code="4" name="/addr7">
+      <node ref="R5" pin="1"/>
+      <node ref="ARD1" pin="15"/>
+      <node ref="J1" pin="14"/>
+    </net>
+    <net code="5" name="/addr6">
+      <node ref="ARD1" pin="14"/>
+      <node ref="J1" pin="13"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="6" name="/addr5">
+      <node ref="ARD1" pin="13"/>
+      <node ref="J1" pin="12"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="7" name="/addr3">
+      <node ref="R9" pin="1"/>
+      <node ref="ARD1" pin="11"/>
+      <node ref="J1" pin="10"/>
+    </net>
+    <net code="8" name="/addr2">
+      <node ref="ARD1" pin="10"/>
+      <node ref="J1" pin="9"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="9" name="/addr1">
+      <node ref="ARD1" pin="9"/>
+      <node ref="J1" pin="8"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="10" name="/usr2_safe">
+      <node ref="U2" pin="4"/>
+      <node ref="ARD1" pin="6"/>
+      <node ref="R12" pin="2"/>
+    </net>
+    <net code="11" name="/led_negative">
+      <node ref="Q1" pin="4"/>
+      <node ref="X3" pin="2"/>
+    </net>
+    <net code="12" name="/pwm_ctrl">
+      <node ref="ARD1" pin="8"/>
+      <node ref="R16" pin="2"/>
+    </net>
+    <net code="13" name="Net-(Q1-Pad1)">
+      <node ref="R16" pin="1"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="14" name="/tx">
+      <node ref="X1" pin="1"/>
+      <node ref="ARD1" pin="1"/>
+    </net>
+    <net code="15" name="/rx">
+      <node ref="ARD1" pin="2"/>
+      <node ref="X1" pin="2"/>
+    </net>
+    <net code="16" name="/reset">
+      <node ref="ARD1" pin="3"/>
+      <node ref="X1" pin="3"/>
+    </net>
+    <net code="17" name="GND">
+      <node ref="X2" pin="2"/>
+      <node ref="X4" pin="2"/>
+      <node ref="ARD1" pin="29"/>
+      <node ref="R1" pin="1"/>
+      <node ref="X1" pin="4"/>
+      <node ref="X7" pin="7"/>
+      <node ref="X7" pin="8"/>
+      <node ref="ARD1" pin="4"/>
+      <node ref="U2" pin="3"/>
+      <node ref="U1" pin="2"/>
+      <node ref="R13" pin="2"/>
+      <node ref="R10" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="U1" pin="3"/>
+      <node ref="R7" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="R17" pin="2"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="X6" pin="8"/>
+      <node ref="X6" pin="7"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="18" name="/usr1">
+      <node ref="X5" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="19" name="/usr2">
+      <node ref="R4" pin="2"/>
+      <node ref="X5" pin="3"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="20" name="+12V">
+      <node ref="X3" pin="1"/>
+      <node ref="X2" pin="1"/>
+    </net>
+    <net code="21" name="Net-(MOUNT1-PadM)">
+      <node ref="MOUNT1" pin="M"/>
+    </net>
+    <net code="22" name="Net-(X6-Pad6)">
+      <node ref="X6" pin="6"/>
+    </net>
+    <net code="23" name="Net-(X6-Pad5)">
+      <node ref="X6" pin="5"/>
+    </net>
+    <net code="24" name="Net-(X7-Pad6)">
+      <node ref="X7" pin="6"/>
+    </net>
+    <net code="25" name="Net-(X7-Pad5)">
+      <node ref="X7" pin="5"/>
+    </net>
+    <net code="26" name="Net-(MOUNT4-PadM)">
+      <node ref="MOUNT4" pin="M"/>
+    </net>
+    <net code="27" name="Net-(MOUNT3-PadM)">
+      <node ref="MOUNT3" pin="M"/>
+    </net>
+    <net code="28" name="Net-(MOUNT2-PadM)">
+      <node ref="MOUNT2" pin="M"/>
+    </net>
+    <net code="29" name="+5V">
+      <node ref="X6" pin="1"/>
+      <node ref="X6" pin="2"/>
+      <node ref="R11" pin="1"/>
+      <node ref="R12" pin="1"/>
+      <node ref="R15" pin="1"/>
+      <node ref="X4" pin="1"/>
+      <node ref="R14" pin="1"/>
+      <node ref="X5" pin="1"/>
+      <node ref="J1" pin="1"/>
+      <node ref="X7" pin="2"/>
+      <node ref="X7" pin="1"/>
+      <node ref="ARD1" pin="27"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J1" pin="7"/>
+      <node ref="J1" pin="6"/>
+      <node ref="J1" pin="5"/>
+      <node ref="J1" pin="4"/>
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="30" name="Net-(R3-Pad1)">
+      <node ref="U1" pin="1"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="31" name="/usr1_safe">
+      <node ref="U1" pin="4"/>
+      <node ref="R11" pin="2"/>
+      <node ref="ARD1" pin="5"/>
+    </net>
+    <net code="32" name="Net-(R4-Pad1)">
+      <node ref="R4" pin="1"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="33" name="Net-(ARD1-Pad22)">
+      <node ref="ARD1" pin="22"/>
+    </net>
+    <net code="34" name="Net-(ARD1-Pad21)">
+      <node ref="ARD1" pin="21"/>
+    </net>
+    <net code="35" name="Net-(ARD1-Pad30)">
+      <node ref="ARD1" pin="30"/>
+    </net>
+    <net code="36" name="Net-(ARD1-Pad20)">
+      <node ref="ARD1" pin="20"/>
+    </net>
+    <net code="37" name="Net-(ARD1-Pad25)">
+      <node ref="ARD1" pin="25"/>
+    </net>
+    <net code="38" name="Net-(ARD1-Pad7)">
+      <node ref="ARD1" pin="7"/>
+    </net>
+    <net code="39" name="Net-(ARD1-Pad19)">
+      <node ref="ARD1" pin="19"/>
+    </net>
+    <net code="40" name="Net-(ARD1-Pad28)">
+      <node ref="ARD1" pin="28"/>
+    </net>
+    <net code="41" name="Net-(ARD1-Pad18)">
+      <node ref="ARD1" pin="18"/>
+    </net>
+    <net code="42" name="Net-(ARD1-Pad17)">
+      <node ref="ARD1" pin="17"/>
+    </net>
+    <net code="43" name="Net-(ARD1-Pad26)">
+      <node ref="ARD1" pin="26"/>
+    </net>
+    <net code="44" name="Net-(ARD1-Pad16)">
+      <node ref="ARD1" pin="16"/>
+    </net>
+  </nets>
+</export>
