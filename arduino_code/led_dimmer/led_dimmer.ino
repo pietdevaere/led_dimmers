@@ -8,10 +8,10 @@
 #define OPTION_BUTTON USR2
 
 /* dim button constants */
-#define DIM_STEP 5
+#define DIM_STEP 1
 #define DEBOUNCE_TIME 15
 #define TOGGLE_TIME 500
-#define DIM_TIME 100
+#define DIM_TIME 20
 #define DIM_VALUE_TIME 50
 #define MINIMUM_TOGGLE_BRIGHTNESS 10
 
@@ -44,7 +44,7 @@ int dim_direction = DIRECTION_UP;
 
 /* dimmer value setting */
 int dimmer_value = 0;
-long dimmer_value_time = 0;
+long dimmer_value_millis = 0;
 
 /* reading out the dimmer button */
 int dim_button_state = STATE_INACTIVE;
@@ -87,9 +87,9 @@ int dimmer_step_target(){
 int dimmer_step_value(){
 	long now_millis = millis();
 
-	if (now_millis - dim_button_millis > DIM_VALUE_TIME &&
+	if (now_millis - dimmer_value_millis > DIM_VALUE_TIME &&
 			dimmer_target != dimmer_value) {
-		dim_button_millis == now_millis;
+		dimmer_value_millis == now_millis;
 		if (dimmer_target > dimmer_value) dimmer_value++;
 		if (dimmer_target < dimmer_value) dimmer_value--;
 
@@ -227,10 +227,6 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  //digitalWrite(LED, HIGH);   // turn the LED on (HIGH is the voltage level)
-  //delay(1000);               // wait for a second
-  //digitalWrite(LED, LOW);    // turn the LED off by making the voltage LOW
-  //delay(1000);               // wait for a second
     int dim_button_action;
 	int option_button_action;
 
