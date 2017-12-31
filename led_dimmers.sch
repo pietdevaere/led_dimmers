@@ -1012,4 +1012,14 @@ NoConn ~ 10350 4100
 NoConn ~ 10350 4200
 NoConn ~ 9350 4100
 NoConn ~ 9350 4200
+Wire Notes Line
+	7600 4350 8950 4350
+Wire Notes Line
+	8950 4350 8950 4700
+Wire Notes Line
+	8950 4700 7600 4700
+Wire Notes Line
+	7600 4700 7600 4350
+Text Notes 7650 4600 0    60   ~ 0
+Mount on ONE\nboard only
 $EndSCHEMATC
