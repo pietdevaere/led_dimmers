@@ -3,6 +3,13 @@
 #define LED 5
 #define USR1 2
 #define USR2 3
+#define ADDR1 6
+#define ADDR2 7
+#define ADDR3 8
+#define ADDR4 9
+#define ADDR5 10
+#define ADDR6 11
+#define ADDR7 12
 
 #define DIM_BUTTON USR1
 #define OPTION_BUTTON USR2
@@ -12,7 +19,9 @@
 #define DEBOUNCE_TIME 15
 #define TOGGLE_TIME 500
 #define DIM_TIME 20
-#define DIM_VALUE_TIME 50
+//#define DIM_VALUE_TIME 50
+#define DIM_SPEED_FAST 50
+#define DIM_SPEED_SLOW 18000
 #define MINIMUM_TOGGLE_BRIGHTNESS 10
 
 /* button states*/
@@ -37,6 +46,31 @@
 
 char i2c_last_received = I2C_IDDLE;
 
+
+/* board IDs
+0: all off
+1: all off + wake up slave
+2: all on
+3: all on + wake up slave
+4: wake up master
+*/
+
+//board id jumper settings
+int jumpers[]={ADDR1, ADDR2, ADDR3, ADDR4, ADDR5, ADDR6, ADDR7};
+int board_id = 0;
+
+for (int x : jumpers){
+    int jumper_value = !digitalRead(x);
+    board_id +=1
+     if (jumper_value == HIGH){ 
+        break;
+     }
+     
+    }
+
+//dimmer speed setting
+int dimmer_speed= DIM_SPEED_SLOW;
+
 /* dimmer target setting */
 int dimmer_target = 0;
 int dimmer_stored_target = 0;
@@ -50,6 +84,7 @@ long dimmer_value_millis = 0;
 int dim_button_state = STATE_INACTIVE;
 long dim_button_millis = 0;
 
+
 /* reading out the option button */
 int option_button_state = STATE_INACTIVE;
 long option_button_millis = 0;
@@ -57,9 +92,12 @@ long option_button_millis = 0;
 /* Called repetedly when dim button is pressed,
  * sets the target brightness value for the led */
 int dimmer_step_target(){
+    
+    dimmer_speed = DIM_SPEED_SLOW;
 
 	if (dim_direction == DIRECTION_UP){
-		dimmer_target += DIM_STEP;
+//		dimmer_target += DIM_STEP;
+        dimmer_target = dimmer_value + DIM_STEP; //ensure to avoid jumps in led brightness if dimming started during wake-up cycle
 	}
 	else if (dim_direction == DIRECTION_DOWN){
 		dimmer_target -= DIM_STEP;
@@ -76,6 +114,7 @@ int dimmer_step_target(){
 	}
 
 	dimmer_stored_target = dimmer_target;
+    
 
 	Serial.print("Dimmer target: ");
 	Serial.println(dimmer_target);
@@ -87,7 +126,8 @@ int dimmer_step_target(){
 int dimmer_step_value(){
 	long now_millis = millis();
 
-	if (now_millis - dimmer_value_millis > DIM_VALUE_TIME &&
+//	if (now_millis - dimmer_value_millis > DIM_VALUE_TIME &&
+    if (now_millis - dimmer_value_millis > dimmer_speed &&
 			dimmer_target != dimmer_value) {
 		dimmer_value_millis == now_millis;
 		if (dimmer_target > dimmer_value) dimmer_value++;
@@ -102,6 +142,9 @@ int dimmer_step_value(){
 
 /* Toggle the led */
 int toggle_led() {
+    
+    dimmer_speed = DIM_SPEED_SLOW;
+    
 	if (dimmer_target > 0) {
 		dimmer_target = 0;
 	} else {
@@ -110,9 +153,51 @@ int toggle_led() {
 }
 
 /* Turn led off, and store dim status */
-int turn_led_off() {
-	dimmer_target = 0;
+int all_led_off() {
+     
+    dimmer_speed = DIM_SPEED_FAST;
+    dimmer_target = 0;
+    
 }
+
+int all_led_on() {
+     
+    dimmer_speed = DIM_SPEED_FAST;
+    dimmer_target = 255;
+    
+}
+
+// set target and speed for wake up light
+int wake_set_target() {
+    
+    dimmer_speed = DIM_SPEED_SLOW;
+    dimmer_target = 255;
+    
+   
+    
+}
+
+
+int option_button_task(){
+    switch (board_id){
+            case(0 OR 1):
+            all_led_off();
+            Serial.println("LOCAL ALL LED OFF");
+            i2c_broadcast(I2C_ALL_OFF);
+            
+            case(2 OR 3):
+            all_led_on();
+            Serial.println("LOCAL ALL LED ON");
+            i2c_broadcast(I2C_ALL_ON);
+            
+            case(4):
+            wake_set_target();
+            Serial.println("LOCAL WAKE SET TARGET");
+            i2c_broadcast(I2C_WAKE_SET);
+    }
+    
+}
+
 
 /* Read and debounce the dim button (light switch)
  * decide which action (Nothing, Dim or Toggle) to
@@ -244,16 +329,31 @@ void loop() {
 	/* OPTION BUTTON */
 	option_button_action = read_option_button();
 	if (option_button_action == ACTION_OPTION){
-		Serial.println("LOCAL ALL OFF");
-		turn_led_off();
-		i2c_broadcast(I2C_ALL_OFF);
+		Serial.println("OPTION BUTTON TASK");
+		option_button_task();
 	}
 
 	/* I2C RECEIVE */
-	if (i2c_last_received == I2C_ALL_OFF) {
+    switch (i2c_last_received){
+            case(I2C_ALL_OFF):
+            Serial.println("I2C ALL OFF");
+            all_led_off();
+            
+            case(I2C_ALL_ON):
+            Serial.println("I2C ALL ON");
+            all_led_on();
+            
+            case(I2C_WAKE_SET):
+            Serial.println("I2C WAKE SET");
+            wake_set_target();
+    
+    }
+    
+/*	if (i2c_last_received == I2C_ALL_OFF) {
 		Serial.println("I2C ALL OFF");
-		turn_led_off();
+		all_led_off();
 	}
+*/
 	i2c_last_received = I2C_IDDLE;
 
 	dimmer_step_value();
